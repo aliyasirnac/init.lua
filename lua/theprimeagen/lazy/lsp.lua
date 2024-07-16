@@ -73,6 +73,17 @@ return {
 						},
 					})
 				end,
+
+				["templ"] = function()
+					local lspconfig = require("lspconfig")
+					lspconfig.templple.setup({
+						capabilities = capabilities,
+						filetypes = {
+							"go",
+							"templ",
+						},
+					})
+				end,
 			},
 		})
 
@@ -109,5 +120,7 @@ return {
 				prefix = "",
 			},
 		})
+
+		vim.filetype.add({ extension = { templ = "templ" } })
 	end,
 }
