@@ -34,6 +34,7 @@ return {
                 "tailwindcss",
                 "html",
                 "emmet_ls",
+                "pyrefly",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
