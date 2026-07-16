@@ -50,6 +50,10 @@ vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
 
+vim.keymap.set("n", "<leader>nd", function()
+	vim.cmd("tabnew " .. vim.fn.stdpath("config") .. "/docs/nvim-config-tr.md")
+end)
+
 -- Yank using y key and store it in system clipboard
 vim.keymap.set({ "n", "v" }, "y", [["+y]])
 vim.keymap.set("n", "Y", [["+Y]])
